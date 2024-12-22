@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>640</width>
+    <height>320</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="ImageWidget">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_3" stretch="0">
+    <item>
+     <widget class="AspectRatioLabel" name="ImageLabel">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="contextMenuPolicy">
+       <enum>Qt::ContextMenuPolicy::DefaultContextMenu</enum>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="scaledContents">
+       <bool>false</bool>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>640</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionOpen"/>
+    <addaction name="actionSave"/>
+    <addaction name="actionClose"/>
+   </widget>
+   <widget class="QMenu" name="menuEffects">
+    <property name="title">
+     <string>Effects</string>
+    </property>
+    <widget class="QMenu" name="menuColor">
+     <property name="title">
+      <string>Color</string>
+     </property>
+     <addaction name="actionNegativ"/>
+     <addaction name="actionSaturation"/>
+     <addaction name="actionContrast"/>
+     <addaction name="actionBrightness"/>
+     <addaction name="separator"/>
+     <addaction name="actionColor_correction"/>
+    </widget>
+    <widget class="QMenu" name="menuOutline">
+     <property name="title">
+      <string>Outline</string>
+     </property>
+     <addaction name="actionSobel"/>
+     <addaction name="actionSobelOutline"/>
+     <addaction name="actionPrevitt"/>
+    </widget>
+    <widget class="QMenu" name="menuRandom">
+     <property name="title">
+      <string>Random</string>
+     </property>
+     <addaction name="actionNoise"/>
+     <addaction name="actionNoise_Gray"/>
+     <addaction name="actionNoise_Multiplication"/>
+    </widget>
+    <widget class="QMenu" name="menuBlur">
+     <property name="title">
+      <string>Blur</string>
+     </property>
+     <addaction name="actionGaussian"/>
+    </widget>
+    <widget class="QMenu" name="menuExperimental">
+     <property name="title">
+      <string>Experimental</string>
+     </property>
+     <addaction name="actionFresnel"/>
+    </widget>
+    <widget class="QMenu" name="menuSharpening">
+     <property name="title">
+      <string>Sharpening</string>
+     </property>
+     <addaction name="actionDefault"/>
+    </widget>
+    <addaction name="menuColor"/>
+    <addaction name="menuOutline"/>
+    <addaction name="menuRandom"/>
+    <addaction name="menuBlur"/>
+    <addaction name="menuExperimental"/>
+    <addaction name="menuSharpening"/>
+   </widget>
+   <widget class="QMenu" name="menuImage">
+    <property name="title">
+     <string>Image</string>
+    </property>
+    <addaction name="actionResize_to_content"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuImage"/>
+   <addaction name="menuEffects"/>
+  </widget>
+  <widget class="QDockWidget" name="LayerDock">
+   <attribute name="dockWidgetArea">
+    <number>2</number>
+   </attribute>
+   <widget class="QWidget" name="LayerDockLayout">
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <property name="leftMargin">
+      <number>0</number>
+     </property>
+     <property name="topMargin">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QScrollArea" name="LayerScroll">
+       <property name="verticalScrollBarPolicy">
+        <enum>Qt::ScrollBarPolicy::ScrollBarAsNeeded</enum>
+       </property>
+       <property name="horizontalScrollBarPolicy">
+        <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOff</enum>
+       </property>
+       <property name="widgetResizable">
+        <bool>true</bool>
+       </property>
+       <widget class="QWidget" name="LayerScrollLayout">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>68</width>
+          <height>187</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_4">
+         <property name="spacing">
+          <number>1</number>
+         </property>
+         <property name="leftMargin">
+          <number>2</number>
+         </property>
+         <property name="topMargin">
+          <number>2</number>
+         </property>
+         <property name="rightMargin">
+          <number>2</number>
+         </property>
+         <property name="bottomMargin">
+          <number>2</number>
+         </property>
+        </layout>
+       </widget>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QDockWidget" name="ToolDock">
+   <attribute name="dockWidgetArea">
+    <number>1</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents_2"/>
+  </widget>
+  <widget class="QDockWidget" name="ConsoleDock">
+   <attribute name="dockWidgetArea">
+    <number>8</number>
+   </attribute>
+   <widget class="QWidget" name="ConsoleLayer">
+    <layout class="QVBoxLayout" name="verticalLayout" stretch="0,5">
+     <item>
+      <widget class="QLineEdit" name="ConsoleInput"/>
+     </item>
+     <item>
+      <widget class="QLabel" name="ConsoleOutput">
+       <property name="text">
+        <string>TextLabel</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <action name="actionOpen">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Open</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </action>
+  <action name="actionResize_to_content">
+   <property name="text">
+    <string>Resize to content</string>
+   </property>
+  </action>
+  <action name="actionNegativ">
+   <property name="text">
+    <string>Negativ</string>
+   </property>
+  </action>
+  <action name="actionSaturation">
+   <property name="text">
+    <string>Saturation</string>
+   </property>
+  </action>
+  <action name="actionContrast">
+   <property name="text">
+    <string>Contrast</string>
+   </property>
+  </action>
+  <action name="actionBrightness">
+   <property name="text">
+    <string>Brightness</string>
+   </property>
+  </action>
+  <action name="actionSobel">
+   <property name="text">
+    <string>Sobel</string>
+   </property>
+  </action>
+  <action name="actionSobelOutline">
+   <property name="text">
+    <string>SobelOutline</string>
+   </property>
+  </action>
+  <action name="actionClose">
+   <property name="text">
+    <string>Close</string>
+   </property>
+  </action>
+  <action name="actionNoise">
+   <property name="text">
+    <string>Noise</string>
+   </property>
+  </action>
+  <action name="actionNoise_Gray">
+   <property name="text">
+    <string>Noise Gray</string>
+   </property>
+  </action>
+  <action name="actionNoise_Multiplication">
+   <property name="text">
+    <string>Noise Multiplication</string>
+   </property>
+  </action>
+  <action name="actionColor_correction">
+   <property name="text">
+    <string>Color correction</string>
+   </property>
+  </action>
+  <action name="actionGaussian">
+   <property name="text">
+    <string>Gaussian</string>
+   </property>
+  </action>
+  <action name="actionFresnel">
+   <property name="text">
+    <string>Highlights</string>
+   </property>
+  </action>
+  <action name="actionDefault">
+   <property name="text">
+    <string>Default</string>
+   </property>
+  </action>
+  <action name="actionPrevitt">
+   <property name="text">
+    <string>Previtt</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>AspectRatioLabel</class>
+   <extends>QLabel</extends>
+   <header location="global">aspectratiolabel.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
