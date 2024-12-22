@@ -24,7 +24,7 @@ Program is made from frontend in Qt, and backend written in pure cpp. backend su
 !(Color)[Screenshots/Color.png]
 !(Outline)[Screenshots/Outline.png]
 !(Random)[Screenshots/Random.png]
-!(Blur)[Screenshots/Blur.png]
+!(Blur)[https://github.com/Bejmach/QtGimp/blob/8a25a13d5f24915947d3f6d599c9e28e545c6e66/Screenshots/Blur.png]
 !(Experimental)[Screenshots/Experimental.png]
 !(Sharpening)[Screenshots/Sharpening.png]
 
