@@ -11,22 +11,22 @@ Program is made from frontend in Qt, and backend written in pure cpp. backend su
 ### Qt frontend
 
 #### File
-!(File)[./Screenshots/File.png]
+!(File)[Screenshots/File.png]
 * open - select a file from disc and open it(supports ppm p3 and p6)
 * save - saves selected file(supports ppm p3), remember to provide file extension(.ppm) in name of file
 * cloce - closes all layers and leaves empty canvas
 
 #### Image
-!(Image)[./Screenshots/Image.png]
+!(Image)[Screenshots/Image.png]
 * Resize to content - resize image to layer content
 
 #### Effects
-!(Color)[./Screenshots/Color.png]
-!(Outline)[./Screenshots/Outline.png]
-!(Random)[./Screenshots/Random.png]
-!(Blur)[./Screenshots/Blur.png]
-!(Experimental)[./Screenshots/Experimental.png]
-!(Sharpening)[./Screenshots/Sharpening.png]
+!(Color)[Screenshots/Color.png]
+!(Outline)[Screenshots/Outline.png]
+!(Random)[Screenshots/Random.png]
+!(Blur)[Screenshots/Blur.png]
+!(Experimental)[Screenshots/Experimental.png]
+!(Sharpening)[Screenshots/Sharpening.png]
 
 
 ### Cpp backend
